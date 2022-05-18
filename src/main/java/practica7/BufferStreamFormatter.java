@@ -9,15 +9,15 @@ public class BufferStreamFormatter {
     public static String lecturaBufferedReader(String fileIn){
         String format = "";
         try{
-            File archivoEntrada = new File("/home/josep/Documentos/daw/programacio/java/practica7/stream_formatter/src/main/webapp/resources/" + fileIn);
+            File archivoEntrada = new File("/home/josep/Documentos/daw/1/programacio/java/practica7/stream_formatter/src/main/webapp/resources/" + fileIn);
             BufferedReader lector = new BufferedReader(new FileReader(archivoEntrada));
             boolean eof = false;
             String lineaLeida = "";
             String [] broken_text = null;
             while(!eof){
                 lineaLeida = lector.readLine();
-                broken_text = lineaLeida.split(" ");
                 if (lineaLeida != null){
+                    broken_text = lineaLeida.split(" ");
                     format += lineaLeida;
                 } else {
                     eof = true;
